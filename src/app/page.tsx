@@ -1,8 +1,9 @@
 'use client';
-import { Button, Toggle } from '@carbon/react';
+import { Button, Header, HeaderGlobalAction, HeaderGlobalBar, HeaderName, HeaderPanel, SwitcherDivider, SwitcherItem, Toggle } from '@carbon/react';
 import { RadarChart, RadarChartOptions, ScaleTypes, ScatterChart } from "@carbon/charts-react";
 import "@carbon/charts/styles.css";
 import { useState } from 'react';
+import { Notification, Search, Switcher } from '@carbon/icons-react';
 const initialData= [
   {
     "product": "Product 1",
@@ -318,7 +319,49 @@ export default function Home() {
 
   return (
     <main>
-      <div className='flex w-full'> 
+        <Header aria-label="IBM Platform Name">
+          <HeaderName href="#" prefix="Testing">
+            [Charts]
+          </HeaderName>
+          <HeaderGlobalBar>
+            <HeaderGlobalAction aria-label="Search">
+              <Search size={20} />
+            </HeaderGlobalAction>
+            <HeaderGlobalAction aria-label="Notifications" >
+              <Notification size={20} />
+            </HeaderGlobalAction>
+            <HeaderGlobalAction  aria-label="Menu"   tooltipAlignment="end">
+              <Switcher size={20} />
+            </HeaderGlobalAction>
+          </HeaderGlobalBar>
+          <HeaderPanel  href="#switcher-button">
+            <Switcher aria-label="Switcher Container">
+              <SwitcherItem aria-label="Link 1" >
+                Link 1
+              </SwitcherItem>
+              <SwitcherDivider />
+              <SwitcherItem aria-label="Link 2">
+                Link 2
+              </SwitcherItem>
+              <SwitcherItem  aria-label="Link 3">
+                Link 3
+              </SwitcherItem>
+              <SwitcherItem aria-label="Link 4">
+                Link 4
+              </SwitcherItem>
+              <SwitcherItem  aria-label="Link 5">
+                Link 5
+              </SwitcherItem>
+              <SwitcherDivider />
+              <SwitcherItem  aria-label="Link 6">
+                Link 6
+              </SwitcherItem>
+            </Switcher>
+          </HeaderPanel>
+        </Header>
+
+
+      <div className='flex w-full mt-12'> 
       {
         view === "radar" && <> 
             <Button disabled={features.length === 0} onClick={()=>generateRandomData()}>Add more random features</Button>
