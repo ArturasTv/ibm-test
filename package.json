@@ -9,12 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@carbon/charts-react": "^1.15.5",
-    "@carbon/icons-react": "^11.39.0",
-    "@carbon/react": "^1.54.0",
-    "next": "14.1.4",
-    "react": "^18",
-    "react-dom": "^18",
+    "@carbon/charts-react": "^1.23.11",
+    "@carbon/icons-react": "^11.61.0",
+    "@carbon/react": "^1.84.0",
+    "next": "^15.3.3",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
     "sass": "^1.74.1"
   },
   "devDependencies": {
@@ -22,7 +22,7 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
-    "eslint-config-next": "14.1.4",
+    "eslint-config-next": "^15.3.3",
     "typescript": "^5"
   }
 }
